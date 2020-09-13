@@ -1,0 +1,28 @@
+.game_board {
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+
+.options {
+    float: left;
+    margin: 10px 5px 5px 5px;
+}
+
+.score_board {
+    float: right;
+    display: inline-block
+}
+
+.header {
+    width: 96%;
+    margin-bottom: 1%;
+    display: inline-block
+}
+
+.rolls {
+    width: 15%;
+    height: 15%;
+    margin: 3px 3px 3px 3px;
+    display: inline-block;
+}

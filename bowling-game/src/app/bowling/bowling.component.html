@@ -1,0 +1,27 @@
+<mat-card class="game_board">
+    <mat-card class="header">
+        <mat-card-content>
+            <div *ngIf="this.game_flag">
+                <div *ngFor="let option of this.bowling_game.options">
+                    <button (click)="roll(option.value)" *ngIf="option.flag" class="options">{{option.value}}</button>
+                </div>
+            </div>
+            <mat-card class="score_board">
+                <mat-card-content>
+                    <p>current_roll: {{this.bowling_game.game.length}}</p>
+                    <p>Total score: {{this.bowling_game.total_score}}</p>
+                    <button mat-button (click)="restart_game()">Restart</button>
+                </mat-card-content>
+            </mat-card>
+        </mat-card-content>
+    </mat-card>
+    <mat-card>
+        <mat-card *ngFor="let roll of this.bowling_game.game" class="rolls">
+            <mat-card-content>
+                <p>First: {{roll["first_roll"]}} Second: {{roll["second_roll"]}}</p>
+                <p>Third: {{roll["third_roll"]}}</p>
+                <p>Score: {{roll["score"]}}</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-card>
+</mat-card>
